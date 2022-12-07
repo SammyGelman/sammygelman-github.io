@@ -44,6 +44,11 @@ section h2 {
   margin: 0 0 20px 0;
 }
 
+section h3 {
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+
 section p {
   font-size: 16px;
   line-height: 1.5;
@@ -83,18 +88,46 @@ footer a {
 </section>
 
 <section>
-  <h2>Projects</h2>
+  <h2>Some Algorithms</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet mauris. Mauris commodo quam fringilla rhoncus. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
+  Here are a few simple density estimation algorithms I wrote in python.
   </p>
+  <h3>Principle Component Analysis</h3>
+  <p>
+For any linearly correlated distribution there exist a vector which best represents the correlation of its data. We can define such a vector as one which, when data is orthogonally projected onto it, maximizes the variance. It can also be said that it is the vector which minimizes the mean-squared difference between the data and their projected values on to such a vector. This vector is called the first principle component. There is a principle component for every dimension of the sample data, all of which are orthogonal to each other and all of which decrease in magnitude from one to the next.
+
+The principle components can be found by calculating the eigenvectors of the distribution's covariance matrix. Computing a linear transformation in which the data set is multiplied by these eigenvectors will set the principle component vectors as the new basis vectors. This new, transformed, data set will be the most accurate approximation to an uncorrelated distribution.  
+     </p>
   <center>
     <img src="images/pca.jpeg" alt="Project 1">
-  <center>
+  </center>
+  
+    <h3>Kernel Density Estimation</h3>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet mauris. Mauris commodo quam fringilla rhoncus. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
+Kernel Density Estimation (KDE) is a more flexible tool which provides a means of extrapolating density from limited sample observation. The kernel, for which the name arrives, is a continuous, non-negative, function where the value of the sample X is a constant in the function. For example, 
   </p>
+  <center>
+    <img src="images/p_kde.jpeg" alt="Project 2">
+  </center>
+    <p>
+The functions have a smoothing parameter, h, which is often referred to as the bandwidth. The bandwidth parameter is tuned so that the minimum value can be found to accurately represent the distribution. When tuning the bandwidth there is a trade off between bias and variance. These functions can assume a wide range of values and the dimensionality of them can vary with the needs of the estimation task. A common kernel is the Gaussian kernel,
+  </p>
+  <center>
+    <img src="images/kernel.jpeg" alt="Project 2">
+  </center>
+     <p>
+where the sample, x_{i}, represents the well-defined mean of the function and the bandwidth, h, is the standard deviation.  
 
-  <img src="project-image-2.jpg" alt="Project 2">
+It is common to parameterize the bandwidth by the standard deviation of the data set. This gives sharper functions when the data has lower deviations and broader functions when deviations are larger.
+</p>
+  <center>
+    <img src="images/bandwidth_example.jpeg" alt="Project 2">
+  </center>
+<p>
+In the above figure a Gaussian distribution is shown as well as a collection of samples drawn from it. Using that sample data, a KDE was used to generate two distributions. In one the bandwidth parameter was set too low, this created a model where the standard deviation is much larger than that of the actual distribution. In the second example, the bandwidth was not set low enough. The bias ended up being much too strong in this case and the distribution barely even resemble a Gaussian. In theory, the KDE should be able to build an extremely good model given that the kernel is the same function as that which was trying to be represented.
+     </p>
+   
+    <img src="project-image-2.jpg" alt="Project 2">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet mauris. Mauris commodo quam fringilla rhoncus. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
   </p>
