@@ -1,0 +1,18 @@
+#container{
+  min-height: 200px;
+  position: relative;
+}
+#clock{
+  text-align: center;
+  font-size:18px;
+  background-color: #333333;
+  color: #fff;
+  min-width: 92px;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 0 auto;
+  position: absolute;
+  top: 90%;
+  right: 90%;
+  transform: translate(-50%, -50%);
+}
