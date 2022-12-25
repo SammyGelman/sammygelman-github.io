@@ -1,11 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Sammy Gelman</title>
-    <link rel="stylesheet" href="/css/clock_box.css">
-    <script rel="text/javascript" href="/js/clock.js">
-    </script>
+
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -76,20 +73,34 @@ footer a {
 }
 </style>
 </head>
-<body>
 
-<header>
+
+<body>
+    <header>
   <img src="images/profile_pic.jpeg" alt="Your face">
   <h1>Sammy Gelman</h1>
+    <link rel="stylesheet" href="css/clock_box.css">
+    <script type="text/javascript" src="js/clock.js"></script>
+
+<div id= "container">
+        <p id="clock"></p> 
+</div>
+
 </header>
 
 <section>
   <h2>About</h2>
   <p>
-  	I'm persuing a career in the field of algorithm development, data science and machine learning implementation. I see the fields of natural language processing and computer vision to lowest hanging of the revolutionary technologies made available to us by big tech. Personal organization and agro-tech are domains that really ignite my passions. 
-	I spent the last three years working on solving for the entropy of the Ising Model. The approach my professor and I chose to pursue was repurposing and masked autoregressive convolutional neural network called PixelCNN to pick up patterns in the model under specific parameters to parametrically solve for the entropy. This project is under review for publication and I will talk about it further later in the website and can fully be referenced from my thesis.
-	I write poetry and did a joint project connecting my poetry to computer generated images (before DALLE-2 was popular haha). I am a singer who has recorded music with a number of independent Israeli artists. I have made wine in Italy, was a deck hand on a commercial salmon fishing boat in Alaska and sheperded sheep in Scotland. I've worked desk jobs, tutored math and science, waited tables, made pizza and worked in a nursery, for a time with plants and a time with toddlers. I spent two years learning and teaching torah in the Old City of Jerusalem and I am of the first members of a learning group in Tel Aviv which has grown 150 people strong and has been meeting weekly for the last 2.5 years. I play DnD and love anime. I run, play beach volleyball and my team mate and I ranked 9th of over 50 teams in an Israeli National Spikeball tournament. I read novels.  
-	My editor is Neovim and I iterate my code using IPython. My brother got me a white rubberduck for my 30th birthday. I made this website byt myself (chatGPT did help a little).
+  I'm persuing a career in the field of algorithm development, data science and machine learning implementation. I see the fields of natural language processing and computer vision to lowest hanging of the revolutionary technologies made available to us by big tech. Personal organization and agro-tech are domains that really ignite my passions. Check out my <a href="pages/cv.html">CV</a>.
+    </p>	
+    <p>	
+    I spent the last three years working on solving for the entropy of the Ising Model. The approach my professor and I chose to pursue was repurposing and masked autoregressive convolutional neural network called PixelCNN to pick up patterns in the model under specific parameters to parametrically solve for the entropy. This project is under review for publication and I will talk about it further later in the website and can fully be referenced from my <a href="pages/thesis.html">thesis</a>.
+	 </p>	
+    <p>	
+    I write poetry and did a joint project connecting my poetry to computer generated images (before DALLE-2 was popular). I am a singer who has recorded music with a number of independent Israeli artists. I have made wine in Italy, was a deck hand on a commercial salmon fishing boat in Alaska and sheperded sheep in Scotland. I've worked desk jobs, tutored math and science, waited tables, made pizza and worked in a nursery, for a time with plants and a time with toddlers. I spent two years learning and teaching torah in the Old City of Jerusalem and I am of the first members of a learning group in Tel Aviv which has grown 150 people strong and has been meeting weekly for the last 2.5 years. I play DnD and love anime. I run, play beach volleyball and my team mate and I ranked 9th of over 50 teams in an Israeli National Spikeball tournament. I read novels.  
+    </p>
+    <p>	
+    My editor is Neovim and I iterate my code using IPython. My brother got me a white rubberduck for my 30th birthday. I made this website byt myself (chatGPT did help a little).
   </p>
 </section>
 
@@ -101,7 +112,8 @@ footer a {
   <h3>Principle Component Analysis</h3>
   <p>
 For any linearly correlated distribution there exist a vector which best represents the correlation of its data. We can define such a vector as one which, when data is orthogonally projected onto it, maximizes the variance. It can also be said that it is the vector which minimizes the mean-squared difference between the data and their projected values on to such a vector. This vector is called the first principle component. There is a principle component for every dimension of the sample data, all of which are orthogonal to each other and all of which decrease in magnitude from one to the next.
-
+    </p>
+    <p>	
 The principle components can be found by calculating the eigenvectors of the distribution's covariance matrix. Computing a linear transformation in which the data set is multiplied by these eigenvectors will set the principle component vectors as the new basis vectors. This new, transformed, data set will be the most accurate approximation to an uncorrelated distribution.  
      </p>
   <center>
@@ -124,6 +136,8 @@ The functions have a smoothing parameter, h, which is often referred to as the b
      <p>
 where the sample, x_{i}, represents the well-defined mean of the function and the bandwidth, h, is the standard deviation.  
 
+    </p>	
+    <p>	
 It is common to parameterize the bandwidth by the standard deviation of the data set. This gives sharper functions when the data has lower deviations and broader functions when deviations are larger.
 </p>
   <center>

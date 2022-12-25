@@ -1,9 +1,8 @@
 #container{
-  min-height: 200px;
+  min-height: 10px;
   position: relative;
 }
 #clock{
-  text-align: center;
   font-size:18px;
   background-color: #333333;
   color: #fff;
@@ -13,6 +12,6 @@
   margin: 0 auto;
   position: absolute;
   top: 90%;
-  right: 90%;
+  right:78%;
   transform: translate(-50%, -50%);
 }
