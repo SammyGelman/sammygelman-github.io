@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sammy Gelman
-               </title>
-
+    <title>Sammy Gelman</title>
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -28,16 +26,29 @@ header img {
   position: absolute;
   top: 10px;
   right: 50px;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 2px solid white;
 }
 
+header bar {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  text-align: center left;
+  position: relative;
+}
+
 section {
-  margin: 50px auto;
+  margin: 20px auto;
   max-width: 800px;
   padding: 20px;
+}
+
+section h1 {
+  font-size: 30px;
+  /* margin: 0 0 20px 0; */
 }
 
 section h2 {
@@ -61,7 +72,6 @@ section img {
   margin: 20px;
 }
 
-
 footer {
   background-color: #333;
   color: white;
@@ -69,23 +79,58 @@ footer {
   text-align: center;
 }
 
-icon img {
-  position: absolute;
-  display: block;
-  padding: 10px; /* Adds a 10px margin to the top of the icon */
-  margin-top: 10px; /* Adds a 10px margin to the top of the icon */
-  margin-left: 50%;
-  padding-top: 0px; /* Adds a 10px padding to the top of the icon */
-  text-align: center;
-  width: 60px;
-  height: 60px;
-}
-
-
 footer a {
   color: white;
   text-decoration: none;
 }
+
+nav {
+  background-color: lightgray;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  margin-left: 50%;
+  padding: 0;
+  display: flex;
+  float: right;
+}
+
+nav li {
+  margin-right: 20px;
+  margin-left: 20px;
+  float: right;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+  float: right;
+}
+
+nav a:hover {
+  color: white;
+  display: block;
+}
+
+icon {
+    margin-left: 91%;
+    position: absolute;
+    align-items: center;
+    top: 190px;
+}
+
+select {
+    display: none;
+}
+
 </style>
 </head>
 
@@ -94,19 +139,25 @@ footer a {
     <header>
   <img src="../images/profile_pic.jpeg" alt="Your face">
   <h1>Sammy Gelman</h1>
-    <link rel="stylesheet" href="../css/clock_box.css">
+      <h2>Deep Learning Engineer</h2>
+<!--    <link rel="stylesheet" href="../css/clock_box.css">
     <script type="text/javascript" src="../js/clock.js"></script>
 
 <div id= "container">
         <p id="clock"></p> 
 </div>
-
+-->
 </header>
 <icon>
-    <a href="../index.html"><img src="../images/home.png"></a>
+    <a href="../index.html"><img src="../images/home.png" width="30px" height="30px" top="10px" ></a>
+
 </icon>
 <section>
-    <embed src="../images/sammy_gelman_cv.pdf" width="800px" height="2100px" top="-10px" >
+    <embed src="../images/profile_pic.pdf" width="800px" height="2100px" top="-10px" >
+</section>
+
+<section>
+    <embed src="../images/cv.pdf" width="800px" height="2100px" top="-10px" >
 </section>
 
 <footer>
@@ -115,3 +166,4 @@ footer a {
 
 </body>
 </html>
+

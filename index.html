@@ -27,16 +27,29 @@ header img {
   position: absolute;
   top: 10px;
   right: 50px;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 2px solid white;
 }
 
+header bar {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  text-align: center left;
+  position: relative;
+}
+
 section {
-  margin: 50px auto;
+  margin: 20px auto;
   max-width: 800px;
   padding: 20px;
+}
+
+section h1 {
+  font-size: 30px;
+  /* margin: 0 0 20px 0; */
 }
 
 section h2 {
@@ -71,6 +84,47 @@ footer a {
   color: white;
   text-decoration: none;
 }
+
+nav {
+  background-color: lightgray;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  margin-left: 50%;
+  padding: 0;
+  display: flex;
+  float: right;
+}
+
+nav li {
+  margin-right: 20px;
+  margin-left: 20px;
+  float: right;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+  float: right;
+}
+
+nav a:hover {
+  color: white;
+  display: block;
+}
+
+select {
+    display: none;
+}
+
 </style>
 </head>
 
@@ -78,17 +132,37 @@ footer a {
 <body>
     <header>
   <img src="images/profile_pic.jpeg" alt="Your face">
-  <h1>Sammy Gelman</h1>
-    <link rel="stylesheet" href="css/clock_box.css">
-    <script type="text/javascript" src="js/clock.js"></script>
+  <h1>Sammy Gelman
+      </h1>
+      <h2>Deep Learning Engineer</h2>
 
+<!--    <link rel="stylesheet" href="css/clock_box.css">
+    <script type="text/javascript" src="js/clock.js"></script>
 <div id= "container">
         <p id="clock"></p> 
 </div>
+    -->
 
 </header>
 
+
+<!-- HTML for the navigation bar -->
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Projects</a></li>
+    <select>
+        <option value="#">a</option> 
+        <option value="#">b</option> 
+        <option value="#">c</option> 
+    </select>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
 <section>
+  <h2>Hand Crafted Portfolio Website</h2>
   <h2>About</h2>
   <p>
   I'm persuing a career in the field of algorithm development, data science and machine learning implementation. I see the fields of natural language processing and computer vision to lowest hanging of the revolutionary technologies made available to us by big tech. Personal organization and agro-tech are domains that really ignite my passions. Check out my <a href="pages/cv.html">CV</a>.
@@ -148,16 +222,7 @@ In the above figure a Gaussian distribution is shown as well as a collection of 
      </p>
    
     <img src="project-image-2.jpg" alt="Project 2">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet mauris. Mauris commodo quam fringilla rhoncus. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
-  </p>
-
-  <img src="project-image-3.jpg" alt="Project 3">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet mauris. Mauris commodo quam fringilla rhoncus. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere.
-  </p>
-
-</section>
+  </section>
 
 <footer>
   <p>Copyright 2022 Sammy Gelman</p>
