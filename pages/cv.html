@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Sammy Gelman</title>
+
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -85,8 +86,8 @@ footer a {
 }
 
 nav {
+  display: inline-block;
   background-color: lightgray;
-  margin: 0 auto;
   height: 50px;
   display: flex;
   align-items: center;
@@ -98,67 +99,110 @@ nav ul {
   margin-left: 50%;
   padding: 0;
   display: flex;
-  float: right;
 }
 
 nav li {
   margin-right: 20px;
   margin-left: 20px;
-  float: right;
-}
+ }
 
 nav a {
   color: black;
   text-decoration: none;
   font-size: 18px;
   margin: 0;
-  float: right;
 }
 
 nav a:hover {
   color: white;
-  display: block;
-}
-
-icon {
-    margin-left: 91%;
-    position: absolute;
-    align-items: center;
-    top: 190px;
+  display: inline-block;
 }
 
 select {
     display: none;
 }
 
+  .hover-window {
+    position: absolute;
+    background-color: lightgray;
+    top: 233px;
+    display: none; /* hide the hover window by default */
+  }
+  <!-- .object:hover .hover-window { -->
+  <!--   display: block; /* show the hover window when hovering over the object */ -->
+  <!-- } -->
 </style>
+
 </head>
+
 
 <body>
     <header>
   <img src="../images/profile_pic.jpeg" alt="Your face">
-  <h1>Sammy Gelman</h1>
+  <h1>Sammy Gelman
+      </h1>
       <h2>Deep Learning Engineer</h2>
-<!--    <link rel="stylesheet" href="../css/clock_box.css">
-    <script type="text/javascript" src="../js/clock.js"></script>
 
-<div id= "container">
-        <p id="clock"></p> 
-</div>
--->
 </header>
-<icon>
-    <a href="../index.html"><img src="../images/home.png" width="30px" height="30px" top="10px" ></a>
-</icon>
+
+
+<!-- HTML for the navigation bar -->
+<nav>
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+        <div class="object">
+            <li><a href="#">Projects</a></li>
+        
+            <div class=hover-window>
+                <li><a href="projects/edge_detection.html">Edge detection<br></a></li>
+                <li><a href="projects/575.html">575 Haiku<br></a></li>
+                <li><a href="projects/pca_kde.html">PCA and KDE<br></a></li>
+                <li><a href="projects/thesis.html">Thesis</a></li>
+            </div>
+            <!--  -->
+            <!-- <div class=hover-window> -->
+            <!-- </div> -->
+            <!--  -->
+            <!-- <div class=hover-window> -->
+            <!-- </div> -->
+        </div> 
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  // Get a reference to the object and the hover window
+  const object = document.querySelector('.object');
+  const hoverWindow = document.querySelector('.hover-window');
+
+  // Show the hover window when the mouse is hovering over the object
+  object.addEventListener('mouseenter', () => {
+    hoverWindow.style.display = 'block';
+  });
+
+  // Hide the hover window after 1 second when the mouse is no longer hovering over the object
+  object.addEventListener('mouseout', () => {
+    setTimeout(() => {
+      hoverWindow.style.display = 'none';
+    }, 3000); // 1 second delay
+  });
+</script>
+
 
 <section>
-    <embed src="../images/sammy_gelman_cv.pdf" width="800px" height="2100px" top="-10px" >
+  <h2>CV</h2>
+    <embed src="../images/sammy_gelman_cv.pdf" width="880px" height="2100px">
 </section>
 
 <footer>
   <p>Copyright 2023 Sammy Gelman</p>
+<!--      <link rel="stylesheet" href="css/clock_box.css"> -->
+<!--     <script type="text/javascript" src="js/clock.js"></script> -->
+<!-- <div id= "container"> -->
+<!--         <p id="clock"></p>  -->
+<!-- </div> -->
 </footer>
 
 </body>
 </html>
-
