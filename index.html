@@ -118,6 +118,14 @@ nav a:hover {
   display: inline-block;
 }
 
+.circle {
+    cursor: pointer;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 select {
     display: none;
 }
@@ -128,9 +136,6 @@ select {
     top: 233px;
     display: none; /* hide the hover window by default */
   }
-  <!-- .object:hover .hover-window { -->
-  <!--   display: block; /* show the hover window when hovering over the object */ -->
-  <!-- } -->
 </style>
 
 </head>
@@ -159,12 +164,6 @@ select {
                 <li><a href="pages/projects/575.html">575 Haiku<br></a></li>
                 <li><a href="pages/projects/thesis.html">Thesis</a></li>
             </div>
-            <!--  -->
-            <!-- <div class=hover-window> -->
-            <!-- </div> -->
-            <!--  -->
-            <!-- <div class=hover-window> -->
-            <!-- </div> -->
         </div> 
     <li><a href="pages/about.html">About</a></li>
     <li><a href="pages/contact.html">Contact</a></li>
@@ -189,18 +188,48 @@ select {
   });
 </script>
 
-
 <section>
   <h2>Hand Crafted Portfolio Website</h2>
-  <h2>Welcome</h2>
   <p>
   Hi, my name is Sammy Gelman. 
   </p>
-  <p>The landing page is always the hardest. While it isn't pretty I do still hope you follow the navigation bar around the site and learn a bit more about me and some of the projects I've done.</p>
-  <p>
-  Enjoy :)
-  </p>
+  <p>This is my portfolio website - feel free to browse some of the projects I've done and to reach out with any questions.</p>
 </section>
+
+<center>
+  <h2>PixelCNN</h2>
+    <a href="pages/projects/thesis.html">
+            <img class="circle" src="images/figure_3.png" />
+    </a>
+</center>
+
+<br><br>
+
+<center>
+  <h2>Edge Detection</h2>
+    <a href="pages/projects/edge_detection.html">
+            <img class="circle" src="images/circles.png" />
+    </a>
+</center>
+
+<br><br>
+
+<center>
+  <h2>PCA and KDE</h2>
+    <a href="pages/projects/pca_kde.html">
+            <img class="circle" src="images/kde_four.jpeg" />
+          </a>
+</center>
+
+<br><br>
+
+<center>
+  <h2>Text2Image</h2>
+    <a href="pages/projects/575.html">
+            <img class="circle" src="images/ex_haiku.png" />
+          </a>
+</center>
+
 
 <footer>
   <p>Copyright 2023 Sammy Gelman</p>
